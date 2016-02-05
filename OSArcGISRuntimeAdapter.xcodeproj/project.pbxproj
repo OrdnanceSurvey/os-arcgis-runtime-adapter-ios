@@ -20,6 +20,7 @@
 		3D57A2541C64E6F000E96749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D57A2521C64E6F000E96749 /* LaunchScreen.storyboard */; };
 		3D57A25B1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; };
 		3D57A25C1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D57A25F1C64ECFF00E96749 /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3D57A25E1C64ECFF00E96749 /* APIKEY */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		3D57A2501C64E6F000E96749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D57A2531C64E6F000E96749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D57A2551C64E6F000E96749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D57A25E1C64ECFF00E96749 /* APIKEY */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APIKEY; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				3D57A2501C64E6F000E96749 /* Assets.xcassets */,
 				3D57A2521C64E6F000E96749 /* LaunchScreen.storyboard */,
 				3D57A2551C64E6F000E96749 /* Info.plist */,
+				3D57A25E1C64ECFF00E96749 /* APIKEY */,
 				3D57A2441C64E6F000E96749 /* Supporting Files */,
 			);
 			path = ArcGISExampleObjC;
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D57A2541C64E6F000E96749 /* LaunchScreen.storyboard in Resources */,
+				3D57A25F1C64ECFF00E96749 /* APIKEY in Resources */,
 				3D57A2511C64E6F000E96749 /* Assets.xcassets in Resources */,
 				3D57A24F1C64E6F000E96749 /* Main.storyboard in Resources */,
 			);

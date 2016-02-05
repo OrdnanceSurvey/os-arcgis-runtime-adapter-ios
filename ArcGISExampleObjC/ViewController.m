@@ -12,12 +12,16 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet AGSMapView *mapView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    OSWMTSBaseLayer *os3857Layer = [OSWMTSBaseLayer default27700Layer];
+    [self.mapView addMapLayer:os3857Layer withName:@"OS Layer"];
 }
 
 - (void)didReceiveMemoryWarning {
