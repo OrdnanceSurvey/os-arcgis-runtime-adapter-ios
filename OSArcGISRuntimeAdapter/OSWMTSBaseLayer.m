@@ -177,7 +177,6 @@
             return [[AGSPoint alloc] initWithX:-2.003750834278E7
                                              y:2.003750834278E7
                               spatialReference:spatialReference];
-
         default:
             NSLog(@"Unsupported projection. Please specify 3857 (Web mercator) or 27700 (BNG).");
             return [[AGSPoint alloc] init];
@@ -208,10 +207,10 @@
 + (AGSEnvelope *)initialExtentForSpatialReference:(AGSSpatialReference *)spatialReference {
     switch (spatialReference.wkid) {
         case 27700:
-            return [[AGSEnvelope alloc] initWithXmin:-675199.9830666328
-                                                ymin:-500356.44737956114
-                                                xmax:1391199.9830666329
-                                                ymax:1780356.4473795616
+            return [[AGSEnvelope alloc] initWithXmin:-6090.0
+                                                ymin:3505.0
+                                                xmax:678006.0
+                                                ymax:1220285.0
                                     spatialReference:spatialReference];
         case 3857:
             return [OSWMTSBaseLayer fullExtentForSpatialReference:spatialReference];
