@@ -10,6 +10,8 @@
 		3D57A2201C621D9F00E96749 /* OSArcGISRuntimeAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D57A21F1C621D9F00E96749 /* OSArcGISRuntimeAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D57A2271C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; };
 		3D57A22C1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D57A22B1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m */; };
+		3D57A23C1C64CB7A00E96749 /* OSWMTSBaseLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D57A23A1C64CB7A00E96749 /* OSWMTSBaseLayer.h */; };
+		3D57A23D1C64CB7A00E96749 /* OSWMTSBaseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D57A23B1C64CB7A00E96749 /* OSWMTSBaseLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		3D57A2261C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSArcGISRuntimeAdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D57A22B1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSArcGISRuntimeAdapterTests.m; sourceTree = "<group>"; };
 		3D57A22D1C621D9F00E96749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D57A23A1C64CB7A00E96749 /* OSWMTSBaseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSWMTSBaseLayer.h; sourceTree = "<group>"; };
+		3D57A23B1C64CB7A00E96749 /* OSWMTSBaseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSWMTSBaseLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				3D57A21F1C621D9F00E96749 /* OSArcGISRuntimeAdapter.h */,
+				3D57A23A1C64CB7A00E96749 /* OSWMTSBaseLayer.h */,
+				3D57A23B1C64CB7A00E96749 /* OSWMTSBaseLayer.m */,
 				3D57A2211C621D9F00E96749 /* Info.plist */,
 			);
 			path = OSArcGISRuntimeAdapter;
@@ -93,6 +99,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D57A23C1C64CB7A00E96749 /* OSWMTSBaseLayer.h in Headers */,
 				3D57A2201C621D9F00E96749 /* OSArcGISRuntimeAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D57A23D1C64CB7A00E96749 /* OSWMTSBaseLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +247,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = $HOME/Library/SDKs/ArcGIS/iOS;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -287,6 +296,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = $HOME/Library/SDKs/ArcGIS/iOS;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -315,6 +325,13 @@
 				INFOPLIST_FILE = OSArcGISRuntimeAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSArcGISRuntimeAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -331,6 +348,13 @@
 				INFOPLIST_FILE = OSArcGISRuntimeAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSArcGISRuntimeAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -376,6 +400,7 @@
 				3D57A2321C621D9F00E96749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D57A2331C621D9F00E96749 /* Build configuration list for PBXNativeTarget "OSArcGISRuntimeAdapterTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +409,7 @@
 				3D57A2351C621D9F00E96749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
