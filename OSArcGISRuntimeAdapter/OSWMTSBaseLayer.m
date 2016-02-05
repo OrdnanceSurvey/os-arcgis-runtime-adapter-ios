@@ -213,7 +213,11 @@
                                                 ymax:1220285.0
                                     spatialReference:spatialReference];
         case 3857:
-            return [OSWMTSBaseLayer fullExtentForSpatialReference:spatialReference];
+            return [[AGSEnvelope alloc] initWithXmin:-909989.0
+                                                ymin:6367635.0
+                                                xmax:238657.0
+                                                ymax:8410694.0
+                                    spatialReference:spatialReference];
         default:
             NSLog(@"Unsupported projection. Please specify 3857 (Web mercator) or 27700 (BNG).");
             return [[AGSEnvelope alloc] init];
