@@ -20,7 +20,6 @@
 		3D57A2541C64E6F000E96749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D57A2521C64E6F000E96749 /* LaunchScreen.storyboard */; };
 		3D57A25B1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; };
 		3D57A25C1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3D57A25F1C64ECFF00E96749 /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3D57A25E1C64ECFF00E96749 /* APIKEY */; };
 		3DC034BB1C68B5AB00B115EB /* OSMapProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC034B91C68B5AB00B115EB /* OSMapProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DC034BC1C68B5AB00B115EB /* OSMapProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */; };
 		3DC034C41C68C33F00B115EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034C31C68C33F00B115EB /* AppDelegate.swift */; };
@@ -30,7 +29,8 @@
 		3DC034CE1C68C33F00B115EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC034CC1C68C33F00B115EB /* LaunchScreen.storyboard */; };
 		3DC034D61C68C4CB00B115EB /* OSArcGISRuntimeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; };
 		3DC034D71C68C4CB00B115EB /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3DC034D91C68C59D00B115EB /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3D57A25E1C64ECFF00E96749 /* APIKEY */; };
+		3DC034DB1C68D91100B115EB /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3DC034DA1C68D91100B115EB /* APIKEY */; };
+		3DC034DC1C68D91100B115EB /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3DC034DA1C68D91100B115EB /* APIKEY */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,6 @@
 		3D57A2501C64E6F000E96749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D57A2531C64E6F000E96749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D57A2551C64E6F000E96749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D57A25E1C64ECFF00E96749 /* APIKEY */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APIKEY; sourceTree = "<group>"; };
 		3DC034B91C68B5AB00B115EB /* OSMapProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMapProduct.h; sourceTree = "<group>"; };
 		3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMapProduct.m; sourceTree = "<group>"; };
 		3DC034C11C68C33F00B115EB /* ArcGISExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcGISExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +110,7 @@
 		3DC034CA1C68C33F00B115EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DC034CD1C68C33F00B115EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC034CF1C68C33F00B115EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DC034DA1C68D91100B115EB /* APIKEY */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APIKEY; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +156,7 @@
 				3D57A2431C64E6F000E96749 /* ArcGISExampleObjC */,
 				3DC034C21C68C33F00B115EB /* ArcGISExampleSwift */,
 				3D57A21D1C621D9F00E96749 /* Products */,
+				3DC034DA1C68D91100B115EB /* APIKEY */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,7 +204,6 @@
 				3D57A2501C64E6F000E96749 /* Assets.xcassets */,
 				3D57A2521C64E6F000E96749 /* LaunchScreen.storyboard */,
 				3D57A2551C64E6F000E96749 /* Info.plist */,
-				3D57A25E1C64ECFF00E96749 /* APIKEY */,
 				3D57A2441C64E6F000E96749 /* Supporting Files */,
 			);
 			path = ArcGISExampleObjC;
@@ -385,7 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D57A2541C64E6F000E96749 /* LaunchScreen.storyboard in Resources */,
-				3D57A25F1C64ECFF00E96749 /* APIKEY in Resources */,
+				3DC034DB1C68D91100B115EB /* APIKEY in Resources */,
 				3D57A2511C64E6F000E96749 /* Assets.xcassets in Resources */,
 				3D57A24F1C64E6F000E96749 /* Main.storyboard in Resources */,
 			);
@@ -396,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC034CE1C68C33F00B115EB /* LaunchScreen.storyboard in Resources */,
-				3DC034D91C68C59D00B115EB /* APIKEY in Resources */,
+				3DC034DC1C68D91100B115EB /* APIKEY in Resources */,
 				3DC034CB1C68C33F00B115EB /* Assets.xcassets in Resources */,
 				3DC034C91C68C33F00B115EB /* Main.storyboard in Resources */,
 			);
