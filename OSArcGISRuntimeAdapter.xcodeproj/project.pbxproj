@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3D57A2201C621D9F00E96749 /* OSArcGISRuntimeAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D57A21F1C621D9F00E96749 /* OSArcGISRuntimeAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D57A2271C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; };
-		3D57A22C1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D57A22B1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m */; };
 		3D57A23C1C64CB7A00E96749 /* OSWMTSBaseLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D57A23A1C64CB7A00E96749 /* OSWMTSBaseLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D57A23D1C64CB7A00E96749 /* OSWMTSBaseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D57A23B1C64CB7A00E96749 /* OSWMTSBaseLayer.m */; };
 		3D57A2461C64E6F000E96749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D57A2451C64E6F000E96749 /* main.m */; };
@@ -41,6 +40,8 @@
 		3DC034F51C68DA9E00B115EB /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EA1C68DA3000B115EB /* OCMock.framework */; };
 		3DC034F61C68DA9E00B115EB /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */; };
 		3DC034F71C68DA9E00B115EB /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EC1C68DA3000B115EB /* Specta.framework */; };
+		3DC034FB1C68DD6100B115EB /* OSMapProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034FA1C68DD6100B115EB /* OSMapProductTests.m */; };
+		3DC034FD1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034FC1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +113,6 @@
 		3D57A21F1C621D9F00E96749 /* OSArcGISRuntimeAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSArcGISRuntimeAdapter.h; sourceTree = "<group>"; };
 		3D57A2211C621D9F00E96749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D57A2261C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSArcGISRuntimeAdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D57A22B1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSArcGISRuntimeAdapterTests.m; sourceTree = "<group>"; };
 		3D57A22D1C621D9F00E96749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D57A23A1C64CB7A00E96749 /* OSWMTSBaseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSWMTSBaseLayer.h; sourceTree = "<group>"; };
 		3D57A23B1C64CB7A00E96749 /* OSWMTSBaseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSWMTSBaseLayer.m; sourceTree = "<group>"; };
@@ -141,6 +141,8 @@
 		3DC034EA1C68DA3000B115EB /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ../Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
 		3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = ../Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		3DC034EC1C68DA3000B115EB /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = ../Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
+		3DC034FA1C68DD6100B115EB /* OSMapProductTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMapProductTests.m; sourceTree = "<group>"; };
+		3DC034FC1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSWMTSBaseLayerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,7 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				3DC034F21C68DA6E00B115EB /* Frameworks */,
-				3D57A22B1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m */,
+				3DC034FA1C68DD6100B115EB /* OSMapProductTests.m */,
+				3DC034FC1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m */,
 				3D57A22D1C621D9F00E96749 /* Info.plist */,
 			);
 			path = OSArcGISRuntimeAdapterTests;
@@ -467,7 +470,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D57A22C1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m in Sources */,
+				3DC034FD1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m in Sources */,
+				3DC034FB1C68DD6100B115EB /* OSMapProductTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +691,7 @@
 		3D57A2341C621D9F00E96749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -701,6 +706,7 @@
 		3D57A2351C621D9F00E96749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
