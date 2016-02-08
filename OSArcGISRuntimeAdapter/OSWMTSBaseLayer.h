@@ -9,9 +9,23 @@
 #import <ArcGIS/ArcGIS.h>
 #import "OSMapProduct.h"
 
+/**
+ *  ArcGIS Runtime tiled service layer subclass for use with the OS Maps API.
+ */
 @interface OSWMTSBaseLayer : AGSTiledServiceLayer
 
+/**
+ *  Initialise a layer with the given style and spatial reference.
+ *
+ *  @param style            The layer style.
+ *  @param spatialReference Spatial reference for the layer.
+ *  @param apiKey           The OS Maps API key to use for this layer.
+ *
+ *  @return An instance of OSWMTSBaseLayer configured with the provided style 
+ *          and spatial reference.
+ */
 - (instancetype)initWithBasemapStyle:(OSBaseMapStyle)style
-                    spatialReference:(OSSpatialReference)spatialReference;
+                    spatialReference:(OSSpatialReference)spatialReference
+                              apiKey:(NSString *)apiKey;
 
 @end

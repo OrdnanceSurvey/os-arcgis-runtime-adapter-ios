@@ -13,12 +13,15 @@
 @property (nonatomic, strong) NSString *baseURLPath;
 @property (nonatomic, strong) AGSTileInfo *osTileInfo;
 @property (nonatomic, strong) AGSEnvelope *osFullEnvelope;
+@property (nonatomic, strong) NSString *apiKey;
 
 @end
 
 @implementation OSWMTSBaseLayer
 
-- (instancetype)initWithBasemapStyle:(OSBaseMapStyle)style spatialReference:(OSSpatialReference)spatialReference {
+- (instancetype)initWithBasemapStyle:(OSBaseMapStyle)style
+                    spatialReference:(OSSpatialReference)spatialReference
+                              apiKey:(NSString *)apiKey {
     NSInteger wkID = WkIDFromOSSpatialReference(spatialReference);
     NSString *layerName = NSStringFromOSMapLayer(style, spatialReference);
 
@@ -27,13 +30,15 @@
     AGSEnvelope *initialExtent = [OSWMTSBaseLayer initialExtentForSpatialReference:spatialReference2];
     AGSEnvelope *fullExtent = [OSWMTSBaseLayer fullExtentForSpatialReference:spatialReference2];
     NSString *baseURLPath = [OSWMTSBaseLayer baseURLPathForSpatialReferenceWKID:wkID
-                                                                      layerName:layerName];
+                                                                      layerName:layerName
+                                                                         apiKey:apiKey];
 
     OSWMTSBaseLayer *layer = [self initWithSpatialReference:spatialReference2
                                                    tileInfo:osTileInfo
                                                  fullExtent:fullExtent
                                                initalExtent:initialExtent
                                                     baseURL:baseURLPath];
+    layer.apiKey = apiKey;
     [layer layerDidLoad];
     return layer;
 }
@@ -53,12 +58,15 @@
     return self;
 }
 
-+ (NSString *)baseURLPathForSpatialReferenceWKID:(NSUInteger)spatialReference layerName:(NSString *)layerName {
++ (NSString *)baseURLPathForSpatialReferenceWKID:(NSUInteger)spatialReference
+                                       layerName:(NSString *)layerName
+                                          apiKey:(NSString *)apiKey {
     NSString *baseURLPath = @"https://api2.ordnancesurvey.co.uk/mapping_api/v1/service/wmts?key={APIKEY}&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER={LAYER}&STYLE=&FORMAT=image/png&TILEMATRIXSET=EPSG:{WKID}&TILEMATRIX=EPSG:{WKID}:{z}&TILEROW={y}&TILECOL={x}";
 
     baseURLPath = [baseURLPath stringByReplacingOccurrencesOfString:@"{LAYER}" withString:layerName];
-    baseURLPath = [baseURLPath stringByReplacingOccurrencesOfString:@"{WKID}" withString:@(spatialReference).stringValue];
-    baseURLPath = [baseURLPath stringByReplacingOccurrencesOfString:@"{APIKEY}" withString:[OSWMTSBaseLayer apiKey]];
+    baseURLPath = [baseURLPath stringByReplacingOccurrencesOfString:@"{WKID}"
+                                                         withString:@(spatialReference).stringValue];
+    baseURLPath = [baseURLPath stringByReplacingOccurrencesOfString:@"{APIKEY}" withString:apiKey];
     return baseURLPath;
 }
 
@@ -79,7 +87,8 @@
 }
 
 - (NSURL *)urlForTileKey:(AGSTileKey *)key {
-    NSString *path = [self.baseURLPath stringByReplacingOccurrencesOfString:@"{z}" withString:@(key.level).stringValue];
+    NSString *path = [self.baseURLPath stringByReplacingOccurrencesOfString:@"{z}"
+                                                                 withString:@(key.level).stringValue];
     path = [path stringByReplacingOccurrencesOfString:@"{x}" withString:@(key.column).stringValue];
     path = [path stringByReplacingOccurrencesOfString:@"{y}" withString:@(key.row).stringValue];
     NSURL *requestURL = [NSURL URLWithString:path];
@@ -213,18 +222,6 @@
             NSLog(@"Unsupported projection. Please specify 3857 (Web mercator) or 27700 (BNG).");
             return [[AGSEnvelope alloc] init];
     }
-}
-
-+ (NSString *)apiKey {
-    NSError *error;
-    NSString *apiKey = [NSString stringWithContentsOfURL:[NSBundle.mainBundle URLForResource:@"APIKEY" withExtension:nil]
-                                                encoding:NSUTF8StringEncoding
-                                                   error:&error];
-    if (!apiKey || error) {
-        NSException *exception = [[NSException alloc] initWithName:@"OSAPIKeyMissing" reason:@"Error loading api key. Make sure this is in an APIKEY file in the project bundle." userInfo:nil];
-        [exception raise];
-    }
-    return [apiKey stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 }
 
 @end

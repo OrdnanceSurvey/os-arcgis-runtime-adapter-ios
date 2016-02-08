@@ -14,9 +14,15 @@ class ViewController: UIViewController {
 
     @IBOutlet var mapView: AGSMapView!
 
+    var apiKey: String {
+        return NSBundle.mainBundle().URLForResource("APIKEY", withExtension: nil).flatMap { url -> String? in
+            do { return try String(contentsOfURL: url).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) } catch { return nil }
+            } ?? ""
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let layer = OSWMTSBaseLayer(basemapStyle: .Road, spatialReference: .BNG)
+        let layer = OSWMTSBaseLayer(basemapStyle: .Road, spatialReference: .BNG, apiKey: apiKey)
         self.mapView.addMapLayer(layer)
     }
 
