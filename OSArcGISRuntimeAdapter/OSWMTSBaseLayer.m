@@ -25,15 +25,15 @@
     NSInteger wkID = WkIDFromOSSpatialReference(spatialReference);
     NSString *layerName = NSStringFromOSMapLayer(style, spatialReference);
 
-    AGSSpatialReference *spatialReference2 = [[AGSSpatialReference alloc] initWithWKID:wkID];
-    AGSTileInfo *osTileInfo = [OSWMTSBaseLayer tileInfoForSpatialReference:spatialReference2];
-    AGSEnvelope *initialExtent = [OSWMTSBaseLayer initialExtentForSpatialReference:spatialReference2];
-    AGSEnvelope *fullExtent = [OSWMTSBaseLayer fullExtentForSpatialReference:spatialReference2];
+    AGSSpatialReference *spatialReferenceInternal = [[AGSSpatialReference alloc] initWithWKID:wkID];
+    AGSTileInfo *osTileInfo = [OSWMTSBaseLayer tileInfoForSpatialReference:spatialReferenceInternal];
+    AGSEnvelope *initialExtent = [OSWMTSBaseLayer initialExtentForSpatialReference:spatialReferenceInternal];
+    AGSEnvelope *fullExtent = [OSWMTSBaseLayer fullExtentForSpatialReference:spatialReferenceInternal];
     NSString *baseURLPath = [OSWMTSBaseLayer baseURLPathForSpatialReferenceWKID:wkID
                                                                       layerName:layerName
                                                                          apiKey:apiKey];
 
-    OSWMTSBaseLayer *layer = [self initWithSpatialReference:spatialReference2
+    OSWMTSBaseLayer *layer = [self initWithSpatialReference:spatialReferenceInternal
                                                    tileInfo:osTileInfo
                                                  fullExtent:fullExtent
                                                initalExtent:initialExtent
