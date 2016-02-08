@@ -31,6 +31,16 @@
 		3DC034D71C68C4CB00B115EB /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3DC034DB1C68D91100B115EB /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3DC034DA1C68D91100B115EB /* APIKEY */; };
 		3DC034DC1C68D91100B115EB /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3DC034DA1C68D91100B115EB /* APIKEY */; };
+		3DC034ED1C68DA3000B115EB /* Expecta.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034E81C68DA3000B115EB /* Expecta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DC034EE1C68DA3000B115EB /* MIQTestingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034E91C68DA3000B115EB /* MIQTestingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DC034EF1C68DA3000B115EB /* OCMock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EA1C68DA3000B115EB /* OCMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DC034F01C68DA3000B115EB /* OHHTTPStubs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DC034F11C68DA3000B115EB /* Specta.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EC1C68DA3000B115EB /* Specta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DC034F31C68DA9E00B115EB /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034E81C68DA3000B115EB /* Expecta.framework */; };
+		3DC034F41C68DA9E00B115EB /* MIQTestingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034E91C68DA3000B115EB /* MIQTestingFramework.framework */; };
+		3DC034F51C68DA9E00B115EB /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EA1C68DA3000B115EB /* OCMock.framework */; };
+		3DC034F61C68DA9E00B115EB /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */; };
+		3DC034F71C68DA9E00B115EB /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EC1C68DA3000B115EB /* Specta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +90,21 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DC034DD1C68D9EE00B115EB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3DC034ED1C68DA3000B115EB /* Expecta.framework in Embed Frameworks */,
+				3DC034EE1C68DA3000B115EB /* MIQTestingFramework.framework in Embed Frameworks */,
+				3DC034EF1C68DA3000B115EB /* OCMock.framework in Embed Frameworks */,
+				3DC034F01C68DA3000B115EB /* OHHTTPStubs.framework in Embed Frameworks */,
+				3DC034F11C68DA3000B115EB /* Specta.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +136,11 @@
 		3DC034CD1C68C33F00B115EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC034CF1C68C33F00B115EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC034DA1C68D91100B115EB /* APIKEY */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APIKEY; sourceTree = "<group>"; };
+		3DC034E81C68DA3000B115EB /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = ../Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
+		3DC034E91C68DA3000B115EB /* MIQTestingFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MIQTestingFramework.framework; path = ../Carthage/Build/iOS/MIQTestingFramework.framework; sourceTree = "<group>"; };
+		3DC034EA1C68DA3000B115EB /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ../Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
+		3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = ../Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		3DC034EC1C68DA3000B115EB /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = ../Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D57A2271C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */,
+				3DC034F31C68DA9E00B115EB /* Expecta.framework in Frameworks */,
+				3DC034F41C68DA9E00B115EB /* MIQTestingFramework.framework in Frameworks */,
+				3DC034F51C68DA9E00B115EB /* OCMock.framework in Frameworks */,
+				3DC034F61C68DA9E00B115EB /* OHHTTPStubs.framework in Frameworks */,
+				3DC034F71C68DA9E00B115EB /* Specta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +222,7 @@
 		3D57A22A1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests */ = {
 			isa = PBXGroup;
 			children = (
+				3DC034F21C68DA6E00B115EB /* Frameworks */,
 				3D57A22B1C621D9F00E96749 /* OSArcGISRuntimeAdapterTests.m */,
 				3D57A22D1C621D9F00E96749 /* Info.plist */,
 			);
@@ -230,6 +266,18 @@
 			path = ArcGISExampleSwift;
 			sourceTree = "<group>";
 		};
+		3DC034F21C68DA6E00B115EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DC034E81C68DA3000B115EB /* Expecta.framework */,
+				3DC034E91C68DA3000B115EB /* MIQTestingFramework.framework */,
+				3DC034EA1C68DA3000B115EB /* OCMock.framework */,
+				3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */,
+				3DC034EC1C68DA3000B115EB /* Specta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -271,6 +319,7 @@
 				3D57A2221C621D9F00E96749 /* Sources */,
 				3D57A2231C621D9F00E96749 /* Frameworks */,
 				3D57A2241C621D9F00E96749 /* Resources */,
+				3DC034DD1C68D9EE00B115EB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -638,6 +687,10 @@
 		3D57A2341C621D9F00E96749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSArcGISRuntimeAdapterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSArcGISRuntimeAdapterTests;
@@ -648,6 +701,10 @@
 		3D57A2351C621D9F00E96749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSArcGISRuntimeAdapterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSArcGISRuntimeAdapterTests;
