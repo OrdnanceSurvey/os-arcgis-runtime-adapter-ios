@@ -18,33 +18,39 @@
 
 @implementation OSWMTSBaseLayer
 
-+ (instancetype)default27700Layer {
-    OSWMTSBaseLayer *layer = [OSWMTSBaseLayer layerWithSpatialReferenceWKID:27700
-                                                                  layerName:@"Road%2027700"];
-    return layer;
-}
+- (instancetype)initWithBasemapStyle:(OSBaseMapStyle)style spatialReference:(OSSpatialReference)spatialReference {
+    NSInteger wkID = WkIDFromOSSpatialReference(spatialReference);
+    NSString *layerName = NSStringFromOSMapLayer(style, spatialReference);
 
-+ (instancetype)default3857Layer {
-    OSWMTSBaseLayer *layer = [OSWMTSBaseLayer layerWithSpatialReferenceWKID:3857
-                                                                  layerName:@"Outdoor%203857"];
-    return layer;
-}
-
-+ (instancetype)layerWithSpatialReferenceWKID:(NSUInteger)wkID layerName:(NSString *)layerName {
-    AGSSpatialReference *spatialReference = [[AGSSpatialReference alloc] initWithWKID:wkID];
-    AGSTileInfo *osTileInfo = [OSWMTSBaseLayer tileInfoForSpatialReference:spatialReference];
-    AGSEnvelope *initialExtent = [OSWMTSBaseLayer initialExtentForSpatialReference:spatialReference];
-    AGSEnvelope *fullExtent = [OSWMTSBaseLayer fullExtentForSpatialReference:spatialReference];
+    AGSSpatialReference *spatialReference2 = [[AGSSpatialReference alloc] initWithWKID:wkID];
+    AGSTileInfo *osTileInfo = [OSWMTSBaseLayer tileInfoForSpatialReference:spatialReference2];
+    AGSEnvelope *initialExtent = [OSWMTSBaseLayer initialExtentForSpatialReference:spatialReference2];
+    AGSEnvelope *fullExtent = [OSWMTSBaseLayer fullExtentForSpatialReference:spatialReference2];
     NSString *baseURLPath = [OSWMTSBaseLayer baseURLPathForSpatialReferenceWKID:wkID
                                                                       layerName:layerName];
 
-    OSWMTSBaseLayer *layer = [[self alloc] initWithSpatialReference:spatialReference
-                                                           tileInfo:osTileInfo
-                                                         fullExtent:fullExtent
-                                                       initalExtent:initialExtent
-                                                            baseURL:baseURLPath];
+    OSWMTSBaseLayer *layer = [self initWithSpatialReference:spatialReference2
+                                                   tileInfo:osTileInfo
+                                                 fullExtent:fullExtent
+                                               initalExtent:initialExtent
+                                                    baseURL:baseURLPath];
     [layer layerDidLoad];
     return layer;
+}
+
+- (instancetype)initWithSpatialReference:(AGSSpatialReference *)spatialReference
+                                tileInfo:(AGSTileInfo *)info
+                              fullExtent:(AGSEnvelope *)fullExtent
+                            initalExtent:(AGSEnvelope *)initialExtent
+                                 baseURL:(NSString *)baseURLPath {
+    self = [super init];
+    if (self) {
+        _osTileInfo = info;
+        _osFullEnvelope = fullExtent;
+        self.initialEnvelope = initialExtent;
+        _baseURLPath = baseURLPath;
+    }
+    return self;
 }
 
 + (NSString *)baseURLPathForSpatialReferenceWKID:(NSUInteger)spatialReference layerName:(NSString *)layerName {
@@ -70,21 +76,6 @@
 
 - (void)setFullEnvelope:(AGSEnvelope *)fullEnvelope {
     self.fullEnvelope = fullEnvelope;
-}
-
-- (instancetype)initWithSpatialReference:(AGSSpatialReference *)spatialReference
-                                tileInfo:(AGSTileInfo *)info
-                              fullExtent:(AGSEnvelope *)fullExtent
-                            initalExtent:(AGSEnvelope *)initialExtent
-                                 baseURL:(NSString *)baseURLPath {
-    self = [super init];
-    if (self) {
-        _osTileInfo = info;
-        _osFullEnvelope = fullExtent;
-        self.initialEnvelope = initialExtent;
-        _baseURLPath = baseURLPath;
-    }
-    return self;
 }
 
 - (NSURL *)urlForTileKey:(AGSTileKey *)key {

@@ -12,7 +12,15 @@ This is a small framework that enables rapid integration of the ESRI ArcGIS Runt
 
 3. Obtain your OS Maps API key from Ordnance Survey. Following the 'Getting Started' guide on [https://developer.ordnancesurvey.co.uk](https://developer.ordnancesurvey.co.uk) to do this.
 
-### Xcode Project Setup 
+### Xcode Project Setup
+
+Once you have created a project in Xcode, configure the ESRI framework like so:
+
+1. Project -> Build Settings -> Framework Search Paths:
+`$(HOME)/Library/SDKs/ArcGIS/iOS/`
+
+2. Target -> Build Settings -> Other linker flags:
+`-ObjC -framework ArcGIS -l c++`
 
 ##### If using Carthage
 

@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char OSArcGISRuntimeAdapterVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <OSArcGISRuntimeAdapter/PublicHeader.h>
 
+#import <OSArcGISRuntimeAdapter/OSMapProduct.h>
 #import <OSArcGISRuntimeAdapter/OSWMTSBaseLayer.h>

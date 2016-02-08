@@ -7,16 +7,11 @@
 //
 
 #import <ArcGIS/ArcGIS.h>
+#import "OSMapProduct.h"
 
 @interface OSWMTSBaseLayer : AGSTiledServiceLayer
 
-- (instancetype)initWithSpatialReference:(AGSSpatialReference *)spatialReference
-                                tileInfo:(AGSTileInfo *)info
-                              fullExtent:(AGSEnvelope *)fullExtent
-                            initalExtent:(AGSEnvelope *)initialExtent
-                                 baseURL:(NSURL *)baseURLPath;
-
-+ (instancetype)default27700Layer;
-+ (instancetype)default3857Layer;
+- (instancetype)initWithBasemapStyle:(OSBaseMapStyle)style
+                    spatialReference:(OSSpatialReference)spatialReference;
 
 @end

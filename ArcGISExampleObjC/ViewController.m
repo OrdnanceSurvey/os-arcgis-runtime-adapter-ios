@@ -10,7 +10,7 @@
 @import OSArcGISRuntimeAdapter;
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<AGSMapViewLayerDelegate>
 
 @property (strong, nonatomic) IBOutlet AGSMapView *mapView;
 
@@ -20,12 +20,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    OSWMTSBaseLayer *os3857Layer = [OSWMTSBaseLayer default27700Layer];
+    OSWMTSBaseLayer *os3857Layer = [[OSWMTSBaseLayer alloc] initWithBasemapStyle:OSBaseMapStyleRoad
+                                                                spatialReference:OSSpatialReferenceBNG];
     [self.mapView addMapLayer:os3857Layer withName:@"OS Layer"];
+    self.mapView.layerDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - AGSMapViewLayerDelegate
+
+- (void)mapViewDidLoad:(AGSMapView *)mapView {
+    [self.mapView.locationDisplay startDataSource];
+    self.mapView.locationDisplay.autoPanMode =
+        AGSLocationDisplayAutoPanModeDefault;
 }
 
 @end

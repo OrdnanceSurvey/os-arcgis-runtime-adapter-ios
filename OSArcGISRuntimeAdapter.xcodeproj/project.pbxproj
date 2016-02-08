@@ -21,6 +21,8 @@
 		3D57A25B1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; };
 		3D57A25C1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3D57A25F1C64ECFF00E96749 /* APIKEY in Resources */ = {isa = PBXBuildFile; fileRef = 3D57A25E1C64ECFF00E96749 /* APIKEY */; };
+		3DC034BB1C68B5AB00B115EB /* OSMapProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC034B91C68B5AB00B115EB /* OSMapProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DC034BC1C68B5AB00B115EB /* OSMapProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		3D57A2531C64E6F000E96749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D57A2551C64E6F000E96749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D57A25E1C64ECFF00E96749 /* APIKEY */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APIKEY; sourceTree = "<group>"; };
+		3DC034B91C68B5AB00B115EB /* OSMapProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMapProduct.h; sourceTree = "<group>"; };
+		3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMapProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				3D57A21F1C621D9F00E96749 /* OSArcGISRuntimeAdapter.h */,
 				3D57A23A1C64CB7A00E96749 /* OSWMTSBaseLayer.h */,
 				3D57A23B1C64CB7A00E96749 /* OSWMTSBaseLayer.m */,
+				3DC034B91C68B5AB00B115EB /* OSMapProduct.h */,
+				3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */,
 				3D57A2211C621D9F00E96749 /* Info.plist */,
 			);
 			path = OSArcGISRuntimeAdapter;
@@ -175,6 +181,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC034BB1C68B5AB00B115EB /* OSMapProduct.h in Headers */,
 				3D57A23C1C64CB7A00E96749 /* OSWMTSBaseLayer.h in Headers */,
 				3D57A2201C621D9F00E96749 /* OSArcGISRuntimeAdapter.h in Headers */,
 			);
@@ -311,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC034BC1C68B5AB00B115EB /* OSMapProduct.m in Sources */,
 				3D57A23D1C64CB7A00E96749 /* OSWMTSBaseLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +609,7 @@
 				3D57A2581C64E6F000E96749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
