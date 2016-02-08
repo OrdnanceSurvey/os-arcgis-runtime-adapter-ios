@@ -2,15 +2,13 @@
 
 This is a small framework that enables rapid integration of the ESRI ArcGIS Runtime iOS SDK with the OS Maps API.
 
-![OS Maps API with ESRI ArcGIS Runtime on iOS](images/map-screenshot.png)
-
 ### Before You Begin
 
 1. Register for an ArcGIS developer account: [https://developers.arcgis.com/sign-up/](https://developers.arcgis.com/sign-up/)
 
 2. Once you have an account, install the ArcGIS Runtime SDK on your development machine. The download can be found here: [https://developers.arcgis.com/ios/](https://developers.arcgis.com/ios/)
 
-3. Obtain your OS Maps API key from Ordnance Survey. Follow the 'Getting Started' guide at [https://developer.ordnancesurvey.co.uk](https://developer.ordnancesurvey.co.uk) to do this.
+3. Obtain your OS Maps API key from Ordnance Survey. Follow the 'Getting Started' guide at: [https://developer.ordnancesurvey.co.uk](https://developer.ordnancesurvey.co.uk) to do this.
 
 ### Xcode Project Setup
 
@@ -71,12 +69,15 @@ import OSArcGISRuntimeAdapter;
 ```
     
 Create a property for your map view by e.g. dragging from a view in Interface Builder into your view controller class:
+
 ![OS Maps API with ESRI ArcGIS Runtime on iOS](images/01-wire-up-outlet.png)
 
 Name it `mapView` and the type `AGSMapView`:
+
 ![OS Maps API with ESRI ArcGIS Runtime on iOS](images/02-name-outlet.png)
 
 Set the class of the view in Interface Builder to `AGSMapView`:
+
 ![OS Maps API with ESRI ArcGIS Runtime on iOS](images/03-set-map-class.png)
 
 Now, in your view controller's `viewDidLoad` method, create a layer and add it to the map, like so (Note: You will need to add your own api key where specified.):
@@ -86,7 +87,7 @@ Objective-C
 ```
     OSWMTSBaseLayer *layer = [[OSWMTSBaseLayer alloc] initWithBasemapStyle:OSBaseMapStyleRoad
                                                           spatialReference:OSSpatialReferenceBNG
-                                                                    apiKey:<your api key>];
+                                                                    apiKey:<api key>];
     [self.mapView addMapLayer:layer];
 
 ```
@@ -94,7 +95,7 @@ Objective-C
 Swift
     
 ```
-        let layer = OSWMTSBaseLayer(basemapStyle: .Road, spatialReference: .BNG, apiKey: <your api key>)
+        let layer = OSWMTSBaseLayer(basemapStyle: .Road, spatialReference: .BNG, apiKey: <api key>)
         self.mapView.addMapLayer(layer)
 ```
 
