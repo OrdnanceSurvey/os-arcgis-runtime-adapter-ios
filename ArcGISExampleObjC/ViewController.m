@@ -22,10 +22,10 @@
     [super viewDidLoad];
     self.mapView.layerDelegate = self;
 
-    OSWMTSBaseLayer *os3857Layer = [[OSWMTSBaseLayer alloc] initWithBasemapStyle:OSBaseMapStyleRoad
-                                                                spatialReference:OSSpatialReferenceBNG
-                                                                          apiKey:self.apiKey];
-    [self.mapView addMapLayer:os3857Layer withName:@"OS Layer"];
+    OSWMTSBaseLayer *layer = [[OSWMTSBaseLayer alloc] initWithBasemapStyle:OSBaseMapStyleRoad
+                                                          spatialReference:OSSpatialReferenceBNG
+                                                                    apiKey:self.apiKey];
+    [self.mapView addMapLayer:layer];
 }
 
 - (void)didReceiveMemoryWarning {
