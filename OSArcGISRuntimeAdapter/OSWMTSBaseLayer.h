@@ -9,6 +9,8 @@
 #import <ArcGIS/ArcGIS.h>
 #import "OSMapProduct.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  ArcGIS Runtime tiled service layer subclass for use with the OS Maps API.
  */
@@ -29,3 +31,5 @@
                               apiKey:(NSString *)apiKey;
 
 @end
+
+NS_ASSUME_NONNULL_END
