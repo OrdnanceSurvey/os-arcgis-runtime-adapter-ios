@@ -43,7 +43,7 @@ In your view controller, import the ArcGIS and OS frameworks:
 Objective-C
     
 ```
-import <ArcGIS/ArcGIS.h>
+#import <ArcGIS/ArcGIS.h>
 @import OSArcGISRuntimeAdapter;
 ```
     
