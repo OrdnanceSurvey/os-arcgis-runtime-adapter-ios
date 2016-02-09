@@ -725,13 +725,6 @@
 				INFOPLIST_FILE = ArcGISExampleObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					ArcGIS,
-					"-l",
-					"c++",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.ArcGISExampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -744,13 +737,6 @@
 				INFOPLIST_FILE = ArcGISExampleObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					ArcGIS,
-					"-l",
-					"c++",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.ArcGISExampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

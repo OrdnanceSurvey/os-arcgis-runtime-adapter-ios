@@ -12,21 +12,7 @@ This is a small framework that enables rapid integration of the ESRI ArcGIS Runt
 
 ### Xcode Project Setup
 
-#### 1. ArcGIS runtime framework setup
-
-Once you have created a project in Xcode, configure the framework like so:
-
-1. Under *Project -> Build Settings -> Framework Search Paths*, add the path:
-`$(HOME)/Library/SDKs/ArcGIS/iOS/`
-
-2. Under *Target -> Build Settings -> Other linker flags*, add the following flags:
-`-ObjC -framework ArcGIS -l c++`
-
-These enable the ArcGIS runtime framework to be located and linked with your application.
-
-#### 2. OSArcGISRuntimeAdapter framework setup
-
-You have two options, use [Carthage](https://github.com/Carthage/Carthage) or build the framework manually.
+You have two options: use [Carthage](https://github.com/Carthage/Carthage) or build the OSArcGISRuntimeAdapter framework manually.
 
 ##### If using Carthage:
 
