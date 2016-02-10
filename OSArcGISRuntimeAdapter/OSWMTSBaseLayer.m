@@ -22,7 +22,7 @@
 - (instancetype)initWithBasemapStyle:(OSBaseMapStyle)style
                     spatialReference:(OSSpatialReference)spatialReference
                               apiKey:(NSString *)apiKey {
-    NSInteger wkID = WkIDFromOSSpatialReference(spatialReference);
+    NSInteger wkID = OSWkIDFromSpatialReference(spatialReference);
     NSString *layerName = NSStringFromOSMapLayer(style, spatialReference);
 
     AGSSpatialReference *spatialReferenceInternal = [[AGSSpatialReference alloc] initWithWKID:wkID];

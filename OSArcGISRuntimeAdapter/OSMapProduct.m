@@ -47,7 +47,7 @@ NSString *NSStringFromOSMapLayer(OSBaseMapStyle style, OSSpatialReference spatia
                             [NSCharacterSet URLPathAllowedCharacterSet]];
 }
 
-NSInteger WkIDFromOSSpatialReference(OSSpatialReference spatialReference) {
+NSInteger OSWkIDFromSpatialReference(OSSpatialReference spatialReference) {
     NSString *name = NSStringFromOSSpatialReference(spatialReference);
     return [name integerValue];
 }

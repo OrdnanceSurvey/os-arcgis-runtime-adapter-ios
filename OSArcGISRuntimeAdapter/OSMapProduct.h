@@ -61,4 +61,4 @@ NSString *NSStringFromOSMapLayer(OSBaseMapStyle style, OSSpatialReference spatia
  *
  *  @return Well known id of the supplied spatial reference, e.g. '27700' for BNG
  */
-NSInteger WkIDFromOSSpatialReference(OSSpatialReference spatialReference);
+NSInteger OSWkIDFromSpatialReference(OSSpatialReference spatialReference);

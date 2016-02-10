@@ -16,12 +16,12 @@
 @implementation OSMapProductTests
 
 - (void)testWellKnownIDIsReturnedCorrectlyForBNG {
-    NSInteger wkidBNG = WkIDFromOSSpatialReference(OSSpatialReferenceBNG);
+    NSInteger wkidBNG = OSWkIDFromSpatialReference(OSSpatialReferenceBNG);
     expect(wkidBNG).to.equal(27700);
 }
 
 - (void)testWellKnownIDIsReturnedCorrectlyForWebMercator {
-    NSInteger wkidBNG = WkIDFromOSSpatialReference(OSSpatialReferenceWebMercator);
+    NSInteger wkidBNG = OSWkIDFromSpatialReference(OSSpatialReferenceWebMercator);
     expect(wkidBNG).to.equal(3857);
 }
 
