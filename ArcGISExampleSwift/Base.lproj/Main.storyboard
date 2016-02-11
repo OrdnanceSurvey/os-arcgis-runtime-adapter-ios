@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,13 +14,38 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="AGSMapView">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Container View">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzg-MG-9Q2" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vp-NM-k1D">
+                                <rect key="frame" x="466" y="550" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="AFH-hy-oqh"/>
+                                    <constraint firstAttribute="height" constant="30" id="o0a-I0-2YY"/>
+                                </constraints>
+                                <state key="normal" title="Toggle Basemap"/>
+                                <connections>
+                                    <action selector="toggleBasemap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Av2-ns-ec5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qzg-MG-9Q2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4hQ-kt-obt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Vp-NM-k1D" secondAttribute="trailing" id="BIc-ru-EMP"/>
+                            <constraint firstItem="Qzg-MG-9Q2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZOA-e5-R3f"/>
+                            <constraint firstItem="Qzg-MG-9Q2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="p9d-vh-H6L"/>
+                            <constraint firstItem="Qzg-MG-9Q2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uYA-W1-qx1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Vp-NM-k1D" secondAttribute="bottom" constant="20" id="vbG-4h-2hV"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="8bC-Xf-vdC" id="S7I-9K-nio"/>
+                        <outlet property="mapView" destination="Qzg-MG-9Q2" id="gvb-vH-UkZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
