@@ -1,21 +1,21 @@
 Pod::Spec.new do |s|
-  s.name         = "OSArcGISRuntimeAdapter"
-  s.version      = "1.0.0"
-  s.summary      = "ArcGIS Runtime adapter framework for OS Maps API."
+  s.name         = 'OSArcGISRuntimeAdapter'
+  s.version      = '0.9.0'
+  s.summary      = 'ArcGIS Runtime adapter framework for OS Maps API.'
 
   s.description  = <<-DESC
                     A small framework that enables rapid integration of the
                     ESRI ArcGIS Runtime iOS SDK with the OS Maps API.
                    DESC
 
-  s.homepage     = "https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios"
-  s.license      = "OGL"
-  s.author       = { "Ordnance Survey"" }
-  s.platform     = :ios, "8.1"
+  s.homepage     = 'https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios'
+  s.license      = 'OGL'
+  s.authors       = { 'Ordnance Survey' => 'mobiledevelopers@os.uk' }
+  s.platform     = :ios, '8.1'
 
-  s.source       = { :git => "https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios.git", :tag => "1.0.0" }
+  s.source       = { :git => 'https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios.git', :tag => s.version.to_s }
 
-  s.source_files  = "OSArcGISRuntimeAdapter"
+  s.source_files  = 'OSArcGISRuntimeAdapter'
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
