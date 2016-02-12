@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'OSArcGISRuntimeAdapter'
-  s.version      = '0.9.0'
+  s.version      = '0.9.1'
   s.summary      = 'ArcGIS Runtime adapter framework for OS Maps API.'
 
   s.description  = <<-DESC
