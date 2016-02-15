@@ -12,7 +12,7 @@ This is a small framework that enables rapid integration of the ESRI ArcGIS Runt
 
 ### Xcode Project Setup
 
-You have two options: use [Carthage](https://github.com/Carthage/Carthage) or build the OSArcGISRuntimeAdapter framework manually.
+The officially supported way to use the OSArcGISRuntimeAdapter framework, is with [Carthage](https://github.com/Carthage/Carthage) but you can also use Cocoapods or build the OSArcGISRuntimeAdapter framework manually.
 
 ##### If using Carthage:
 
@@ -27,7 +27,15 @@ You have two options: use [Carthage](https://github.com/Carthage/Carthage) or bu
     
     `$(SRCROOT)/Carthage/Build/iOS/OSArcGISRuntimeAdapter.framework`
 
-You can now move on to 'Creating a Map'
+You can now move on to [Creating a Map](#creating-a-map)
+
+##### Cocoapods setup:
+
+1. Add `pod 'OSArcGISRuntimeAdapter'` to your `Podfile`
+2. `$ pod install`
+3. Open the generated Xcode workspace, as you would normally when working with Cocoapods.
+
+You can now move on to [Creating a Map](#creating-a-map)
     
 ##### Manual framework build:
 
