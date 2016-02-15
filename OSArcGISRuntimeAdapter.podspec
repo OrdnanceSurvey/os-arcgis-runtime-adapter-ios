@@ -6,19 +6,17 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
                     A small framework that enables rapid integration of the
                     ESRI ArcGIS Runtime iOS SDK with the OS Maps API.
-                   DESC
+                    DESC
 
   spec.homepage     = 'https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios'
   spec.license      = 'OGL'
-  spec.authors       = { 'Ordnance Survey' => 'mobiledevelopers@os.uk' }
+  spec.authors      = { 'Ordnance Survey' => 'mobiledevelopers@os.uk' }
 
   spec.platform     = :ios, '8.1'
 
   spec.source       = { :git => 'https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios.git', :tag => spec.version.to_s }
 
-  spec.source_files  = 'OSArcGISRuntimeAdapter'
+  spec.source_files = 'OSArcGISRuntimeAdapter'
 
-  spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$HOME/Library/SDKs/ArcGIS/iOS', 'OTHER_LDFLAGS' => '-ObjC -framework ArcGIS -l c++' }
-  # s.dependency "JSONKit", "~> 1.4"
-
+  spec.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '$HOME/Library/SDKs/ArcGIS/iOS', 'OTHER_LDFLAGS' => '-ObjC -framework ArcGIS -l c++' }
 end
