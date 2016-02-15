@@ -11,30 +11,12 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios'
   spec.license      = 'OGL'
   spec.authors       = { 'Ordnance Survey' => 'mobiledevelopers@os.uk' }
+
   spec.platform     = :ios, '8.1'
 
   spec.source       = { :git => 'https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios.git', :tag => spec.version.to_s }
 
   spec.source_files  = 'OSArcGISRuntimeAdapter'
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
-
-  # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
 
   spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$HOME/Library/SDKs/ArcGIS/iOS', 'OTHER_LDFLAGS' => '-ObjC -framework ArcGIS -l c++' }
   # s.dependency "JSONKit", "~> 1.4"
