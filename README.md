@@ -17,7 +17,7 @@ The officially supported way to use the OSArcGISRuntimeAdapter framework, is wit
 ##### If using Carthage:
 
 1. Add `github "OrdnanceSurvey/os-arcgis-runtime-adapter"` to your Cartfile.
-2. Run `carthage update --platform-ios --no-use-binaries`
+2. Run `carthage update --platform iOS --no-use-binaries`
 3. Drag the built framework from the `Carthage/Build` folder into the "Linked Frameworks and Libraries" section in the "General" settings tab of your application target.
 4. In the "Build Phases" of your application target's settings, click the '+' and select "New Run Script Phase". Add the following to the script:
 
