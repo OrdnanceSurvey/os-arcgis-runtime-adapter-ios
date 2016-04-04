@@ -65,4 +65,15 @@
     expect(name).to.equal(@"Night%203857");
 }
 
+- (void)testProductNameIsReturnedCorrectlyForLeisureStyleInBNG {
+    NSString *name = NSStringFromOSMapLayer(OSBaseMapStyleLeisure, OSSpatialReferenceBNG);
+    expect(name).to.equal(@"Leisure%2027700");
+}
+
+- (void)testExceptionIsRaisedCorrectlyForLeisureStyleInWebMercator {
+    expect(^{
+        NSStringFromOSMapLayer(OSBaseMapStyleLeisure, OSSpatialReferenceWebMercator);
+    }).to.raise(NSInvalidArgumentException);
+}
+
 @end

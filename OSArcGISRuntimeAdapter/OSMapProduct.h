@@ -41,7 +41,11 @@ typedef NS_ENUM(NSUInteger, OSBaseMapStyle) {
     /**
      *  Night style
      */
-    OSBaseMapStyleNight
+    OSBaseMapStyleNight,
+    /**
+     *  Leisure map stack. Only available in BNG
+     */
+    OSBaseMapStyleLeisure
 };
 
 /**

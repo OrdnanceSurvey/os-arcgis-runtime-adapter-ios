@@ -21,6 +21,8 @@ NSString *NSStringFromOSBaseMapStyle(OSBaseMapStyle style) {
             return @"Light";
         case OSBaseMapStyleNight:
             return @"Night";
+        case OSBaseMapStyleLeisure:
+            return @"Leisure";
     }
 }
 
@@ -40,6 +42,9 @@ NSString *NSStringFromOSSpatialReference(OSSpatialReference spatialReference) {
  *  Return the name to use for the layer in an http request
  */
 NSString *NSStringFromOSMapLayer(OSBaseMapStyle style, OSSpatialReference spatialReference) {
+    if (style == OSBaseMapStyleLeisure && spatialReference == OSSpatialReferenceWebMercator) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Leisure stack is only available in BNG" userInfo:nil];
+    }
     NSString *styleName = NSStringFromOSBaseMapStyle(style);
     NSString *spatialReferenceName = NSStringFromOSSpatialReference(spatialReference);
     NSString *productName = [NSString stringWithFormat:@"%@ %@", styleName, spatialReferenceName];
