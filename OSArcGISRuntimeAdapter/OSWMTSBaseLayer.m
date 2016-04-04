@@ -10,10 +10,10 @@
 
 @interface OSWMTSBaseLayer ()
 
-@property (nonatomic, strong) NSString *baseURLPath;
+@property (nonatomic, copy) NSString *baseURLPath;
 @property (nonatomic, strong) AGSTileInfo *osTileInfo;
 @property (nonatomic, strong) AGSEnvelope *osFullEnvelope;
-@property (nonatomic, strong) NSString *apiKey;
+@property (nonatomic, copy) NSString *apiKey;
 
 @end
 
@@ -33,14 +33,15 @@
                                                                       layerName:layerName
                                                                          apiKey:apiKey];
 
-    OSWMTSBaseLayer *layer = [self initWithSpatialReference:spatialReferenceInternal
-                                                   tileInfo:osTileInfo
-                                                 fullExtent:fullExtent
-                                               initalExtent:initialExtent
-                                                    baseURL:baseURLPath];
-    layer.apiKey = apiKey;
-    [layer layerDidLoad];
-    return layer;
+    if ((self = [self initWithSpatialReference:spatialReferenceInternal
+                                      tileInfo:osTileInfo
+                                    fullExtent:fullExtent
+                                  initalExtent:initialExtent
+                                       baseURL:baseURLPath])) {
+        _apiKey = [apiKey copy];
+        [self layerDidLoad];
+    }
+    return self;
 }
 
 - (instancetype)initWithSpatialReference:(AGSSpatialReference *)spatialReference
@@ -53,7 +54,7 @@
         _osTileInfo = info;
         _osFullEnvelope = fullExtent;
         self.initialEnvelope = initialExtent;
-        _baseURLPath = baseURLPath;
+        _baseURLPath = [baseURLPath copy];
     }
     return self;
 }
@@ -74,16 +75,8 @@
     return self.osTileInfo;
 }
 
-- (void)setTileInfo:(AGSTileInfo *)tileInfo {
-    self.osTileInfo = tileInfo;
-}
-
 - (AGSEnvelope *)fullEnvelope {
     return self.osFullEnvelope;
-}
-
-- (void)setFullEnvelope:(AGSEnvelope *)fullEnvelope {
-    self.fullEnvelope = fullEnvelope;
 }
 
 - (NSURL *)urlForTileKey:(AGSTileKey *)key {
