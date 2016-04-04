@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'OSArcGISRuntimeAdapter'
-  spec.version      = '0.9.4'
+  spec.version      = '1.0.0'
   spec.summary      = 'ArcGIS Runtime adapter framework for OS Maps API.'
 
   spec.description  = <<-DESC
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
                     DESC
 
   spec.homepage     = 'https://github.com/OrdnanceSurvey/os-arcgis-runtime-adapter-ios'
-  spec.license      = 'OGL'
+  spec.license      = 'Apache 2.0'
   spec.authors      = { 'Ordnance Survey' => 'mobiledevelopers@os.uk' }
 
   spec.platform     = :ios, '8.1'
