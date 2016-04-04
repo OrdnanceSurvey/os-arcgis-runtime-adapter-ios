@@ -29,14 +29,6 @@ The officially supported way to use the OSArcGISRuntimeAdapter framework, is wit
 
 You can now move on to [Creating a Map](#creating-a-map)
 
-##### Cocoapods setup:
-
-1. Add `pod 'OSArcGISRuntimeAdapter'` to your `Podfile`
-2. `$ pod install`
-3. Open the generated Xcode workspace, as you would normally when working with Cocoapods.
-
-You can now move on to [Creating a Map](#creating-a-map)
-
 ##### Manual framework build:
 
 1. Clone the repo
