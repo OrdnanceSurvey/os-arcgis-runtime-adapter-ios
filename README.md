@@ -24,7 +24,7 @@ The officially supported way to use the OSArcGISRuntimeAdapter framework, is wit
     `/usr/local/bin/carthage copy-frameworks`
 
     and add the path to the OS framework in the "Input Files" section:
-    
+
     `$(SRCROOT)/Carthage/Build/iOS/OSArcGISRuntimeAdapter.framework`
 
 You can now move on to [Creating a Map](#creating-a-map)
@@ -36,7 +36,7 @@ You can now move on to [Creating a Map](#creating-a-map)
 3. Open the generated Xcode workspace, as you would normally when working with Cocoapods.
 
 You can now move on to [Creating a Map](#creating-a-map)
-    
+
 ##### Manual framework build:
 
 1. Clone the repo
@@ -49,19 +49,19 @@ You can now move on to [Creating a Map](#creating-a-map)
 In your view controller, import the ArcGIS and OS frameworks:
 
 Objective-C
-    
+
 ```
 #import <ArcGIS/ArcGIS.h>
 @import OSArcGISRuntimeAdapter;
 ```
-    
+
 Swift
-    
+
 ```
 import ArcGIS;
 import OSArcGISRuntimeAdapter;
 ```
-    
+
 Create a property for your map view by e.g. dragging from a view in Interface Builder into your view controller class:
 
 ![OS Maps API with ESRI ArcGIS Runtime on iOS](images/01-wire-up-outlet.png)
@@ -77,7 +77,7 @@ Set the class of the view in Interface Builder to `AGSMapView`:
 Now, in your view controller's `viewDidLoad` method, create a layer and add it to the map, like so (Note: You will need to add your own api key where specified.):
 
 Objective-C
-    
+
 ```
     OSWMTSBaseLayer *layer = [[OSWMTSBaseLayer alloc] initWithBasemapStyle:OSBaseMapStyleRoad
                                                           spatialReference:OSSpatialReferenceBNG
@@ -85,9 +85,9 @@ Objective-C
     [self.mapView addMapLayer:layer];
 
 ```
-    
+
 Swift
-    
+
 ```
         let layer = OSWMTSBaseLayer(basemapStyle: .Road, spatialReference: .BNG, apiKey: <api key>)
         self.mapView.addMapLayer(layer)
@@ -102,3 +102,8 @@ If everything is setup correctly, when you run your app, the map will load and y
 The project contains both Objective-C and Swift example applications which illustrate usage of the OS Maps API. To run these, make sure your API key is in a file named `APIKEY` in the project root directory.
 
 `$ printf <your-api-key> > APIKEY`
+
+## License
+Ordnance Survey's code is licensed under the terms of the [Apache 2.0 License](LICENSE).
+
+You must also adhere to the terms and conditions set out by Esri for use of the ArcGIS SDK.
