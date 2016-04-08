@@ -1,0 +1,6 @@
+github "AliSoftware/OHHTTPStubs" "5.0.0"
+github "specta/expecta" "v1.0.5"
+github "erikdoe/ocmock" "v3.2.2"
+github "OrdnanceSurvey/os-mapproducts-ios" "1.0.0"
+github "specta/specta" "v1.0.5"
+github "dhardiman/miq-ios-testingframeworks" "1.0.2"
