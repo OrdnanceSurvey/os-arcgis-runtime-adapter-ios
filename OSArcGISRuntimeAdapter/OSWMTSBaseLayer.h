@@ -7,7 +7,7 @@
 //
 
 #import <ArcGIS/ArcGIS.h>
-#import "OSMapProduct.h"
+@import OSMapProducts;
 
 NS_ASSUME_NONNULL_BEGIN
 

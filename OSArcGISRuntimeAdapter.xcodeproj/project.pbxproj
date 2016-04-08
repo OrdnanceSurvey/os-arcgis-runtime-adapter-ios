@@ -19,8 +19,6 @@
 		3D57A2541C64E6F000E96749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D57A2521C64E6F000E96749 /* LaunchScreen.storyboard */; };
 		3D57A25B1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; };
 		3D57A25C1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57A21C1C621D9F00E96749 /* OSArcGISRuntimeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3DC034BB1C68B5AB00B115EB /* OSMapProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC034B91C68B5AB00B115EB /* OSMapProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DC034BC1C68B5AB00B115EB /* OSMapProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */; };
 		3DC034C41C68C33F00B115EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034C31C68C33F00B115EB /* AppDelegate.swift */; };
 		3DC034C61C68C33F00B115EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034C51C68C33F00B115EB /* ViewController.swift */; };
 		3DC034C91C68C33F00B115EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC034C71C68C33F00B115EB /* Main.storyboard */; };
@@ -40,8 +38,12 @@
 		3DC034F51C68DA9E00B115EB /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EA1C68DA3000B115EB /* OCMock.framework */; };
 		3DC034F61C68DA9E00B115EB /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */; };
 		3DC034F71C68DA9E00B115EB /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC034EC1C68DA3000B115EB /* Specta.framework */; };
-		3DC034FB1C68DD6100B115EB /* OSMapProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034FA1C68DD6100B115EB /* OSMapProductTests.m */; };
 		3DC034FD1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC034FC1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m */; };
+		457775C51CB7B50300F7B3E8 /* OSMapProducts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457775C41CB7B50300F7B3E8 /* OSMapProducts.framework */; };
+		457775C61CB7B56400F7B3E8 /* OSMapProducts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 457775C41CB7B50300F7B3E8 /* OSMapProducts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		457775C71CB7B56900F7B3E8 /* OSMapProducts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 457775C41CB7B50300F7B3E8 /* OSMapProducts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		457775C81CB7B58600F7B3E8 /* OSMapProducts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457775C41CB7B50300F7B3E8 /* OSMapProducts.framework */; };
+		457775C91CB7B58800F7B3E8 /* OSMapProducts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457775C41CB7B50300F7B3E8 /* OSMapProducts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				3D57A25C1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */,
+				457775C61CB7B56400F7B3E8 /* OSMapProducts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +90,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				3DC034D71C68C4CB00B115EB /* OSArcGISRuntimeAdapter.framework in Embed Frameworks */,
+				457775C71CB7B56900F7B3E8 /* OSMapProducts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,8 +130,6 @@
 		3D57A2501C64E6F000E96749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D57A2531C64E6F000E96749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D57A2551C64E6F000E96749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DC034B91C68B5AB00B115EB /* OSMapProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMapProduct.h; sourceTree = "<group>"; };
-		3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMapProduct.m; sourceTree = "<group>"; };
 		3DC034C11C68C33F00B115EB /* ArcGISExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcGISExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC034C31C68C33F00B115EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC034C51C68C33F00B115EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,8 +143,8 @@
 		3DC034EA1C68DA3000B115EB /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ../Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
 		3DC034EB1C68DA3000B115EB /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = ../Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		3DC034EC1C68DA3000B115EB /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = ../Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
-		3DC034FA1C68DD6100B115EB /* OSMapProductTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMapProductTests.m; sourceTree = "<group>"; };
 		3DC034FC1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSWMTSBaseLayerTests.m; sourceTree = "<group>"; };
+		457775C41CB7B50300F7B3E8 /* OSMapProducts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSMapProducts.framework; path = Carthage/Build/iOS/OSMapProducts.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457775C51CB7B50300F7B3E8 /* OSMapProducts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D57A25B1C64E74E00E96749 /* OSArcGISRuntimeAdapter.framework in Frameworks */,
+				457775C91CB7B58800F7B3E8 /* OSMapProducts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC034D61C68C4CB00B115EB /* OSArcGISRuntimeAdapter.framework in Frameworks */,
+				457775C81CB7B58600F7B3E8 /* OSMapProducts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,11 +216,10 @@
 		3D57A21E1C621D9F00E96749 /* OSArcGISRuntimeAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				457775C41CB7B50300F7B3E8 /* OSMapProducts.framework */,
 				3D57A21F1C621D9F00E96749 /* OSArcGISRuntimeAdapter.h */,
 				3D57A23A1C64CB7A00E96749 /* OSWMTSBaseLayer.h */,
 				3D57A23B1C64CB7A00E96749 /* OSWMTSBaseLayer.m */,
-				3DC034B91C68B5AB00B115EB /* OSMapProduct.h */,
-				3DC034BA1C68B5AB00B115EB /* OSMapProduct.m */,
 				3D57A2211C621D9F00E96749 /* Info.plist */,
 			);
 			path = OSArcGISRuntimeAdapter;
@@ -225,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				3DC034F21C68DA6E00B115EB /* Frameworks */,
-				3DC034FA1C68DD6100B115EB /* OSMapProductTests.m */,
 				3DC034FC1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m */,
 				3D57A22D1C621D9F00E96749 /* Info.plist */,
 			);
@@ -288,7 +291,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DC034BB1C68B5AB00B115EB /* OSMapProduct.h in Headers */,
 				3D57A23C1C64CB7A00E96749 /* OSWMTSBaseLayer.h in Headers */,
 				3D57A2201C621D9F00E96749 /* OSArcGISRuntimeAdapter.h in Headers */,
 			);
@@ -461,7 +463,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DC034BC1C68B5AB00B115EB /* OSMapProduct.m in Sources */,
 				3D57A23D1C64CB7A00E96749 /* OSWMTSBaseLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +472,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC034FD1C68DD6D00B115EB /* OSWMTSBaseLayerTests.m in Sources */,
-				3DC034FB1C68DD6100B115EB /* OSMapProductTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +649,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSArcGISRuntimeAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -672,6 +676,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSArcGISRuntimeAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -697,7 +705,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = OSArcGISRuntimeAdapterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSArcGISRuntimeAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -712,7 +720,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = OSArcGISRuntimeAdapterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSArcGISRuntimeAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -722,6 +730,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArcGISExampleObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -734,6 +746,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArcGISExampleObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -746,6 +762,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArcGISExampleSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -759,6 +779,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArcGISExampleSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -813,6 +837,7 @@
 				3DC034D21C68C33F00B115EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
